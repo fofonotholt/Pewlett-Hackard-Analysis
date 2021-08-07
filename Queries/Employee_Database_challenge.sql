@@ -49,3 +49,14 @@ FROM employees as e
 WHERE (e.birth_date BETWEEN '1965-01-01' AND '1965-12-31')
 	AND (de.to_date = '9999-01-01')
 ORDER BY e.emp_no;
+
+-- Deliverable 3
+-- Aditional Queries
+-- First we get the count of employees from the mentorship_eligibility table
+SELECT COUNT (emp_no) FROM mentorship_eligibility;
+
+-- Then we ORDER BY and GROUP BY the mentorship_eligibility table to get a comparison with the reteiring_titles data
+SELECT COUNT (emp_no), title
+FROM mentorship_eligibility
+GROUP BY title
+ORDER BY (SELECT COUNT (emp_no)) DESC;
