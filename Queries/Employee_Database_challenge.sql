@@ -52,8 +52,8 @@ ORDER BY e.emp_no;
 
 -- Deliverable 3
 -- Aditional Queries
--- First we get the count of employees from the mentorship_eligibility table
-SELECT COUNT (emp_no) FROM mentorship_eligibility;
+-- First we get the count of employees from the unique_titles table to get the number of retiring employees
+SELECT COUNT (emp_no) FROM unique_titles;
 
 -- Then we ORDER BY and GROUP BY the mentorship_eligibility table to get a comparison with the reteiring_titles data
 SELECT COUNT (emp_no), title
